@@ -29,11 +29,17 @@ html {
 
 .body {
     font-family: 'Open Sans';
-    background: #FFF1F8;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding-bottom: 17px;
+}
+
+.women {
+    background-color: #FFF1F8;
+}
+
+.men {
+    background-color: #EFF9FE;;
 }
 
 button {
@@ -43,6 +49,16 @@ button {
 img {
     max-width: 100%;
     height: auto;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .container {
@@ -65,6 +81,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 .header__button-change {
@@ -108,9 +125,17 @@ img {
     background-image: url('../image/women.svg');
 }
 
+.men .header__button-gender_men {
+    border-color: #1178B2;
+}
+
+.women .header__button-gender_women{
+    border-color: #C300C7;
+}
+
 .card {
     flex-grow: 1;
-    padding: 32px 0;
+    padding: 32px 0 15px;
     display: flex;
     align-items: center;
 }
@@ -132,10 +157,46 @@ img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Bad Script';
     font-weight: 400;
     font-size: max(3em, min(calc(100vw * 3 / 140), 6em));
     line-height: 1.6;
+}
+
+.women .card__text {
+    font-family: 'Bad Script';
+}
+
+.men .card__text {
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.footer {
+    padding: 17px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__contacts-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.footer__social {
+    display: flex;
+    gap: 16px;
 }
 
 @media (max-width: 880px) {
@@ -161,5 +222,17 @@ img {
         height: 40px;
         background-size: 30px;
         margin-right: 0;
+    }
+}
+
+@media (max-width: 880px) {
+    .footer__container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer__contacts {
+        order: 1;
     }
 }
