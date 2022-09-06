@@ -96,6 +96,15 @@ ul {
     margin-right: 30px;
 }
 
+.men .header__button-change {
+    background-color: #1178B2;
+}
+
+.women .header__button-change {
+    background-color: #C300C7;
+}
+
+
 .header__button-change:last-child {
     margin-right: 0;
 }
@@ -160,6 +169,7 @@ ul {
     font-weight: 400;
     font-size: max(3em, min(calc(100vw * 3 / 140), 6em));
     line-height: 1.6;
+    text-align: center;
 }
 
 .women .card__text {
